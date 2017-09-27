@@ -1,0 +1,48 @@
+.descr {
+  margin: 0;
+  padding: 40px 15px;
+  padding-bottom: 25px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: @blue;
+  text-align: center;
+
+  background-color: @white;
+}
+
+.descr__part {
+  display: none;
+}
+
+@media @tablet-widths {
+
+  .descr {
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    font-size: 18px;
+  }
+
+  .descr__part {
+    display: block;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .descr {
+    padding-left: 160px;
+    padding-right: 160px;
+    // padding-bottom: 30px;
+  }
+
+  .descr__part {
+    display: inline-block;
+  }
+
+}

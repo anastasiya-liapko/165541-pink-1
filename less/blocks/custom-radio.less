@@ -1,0 +1,42 @@
+.custom-radio {
+  margin-bottom: 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue;
+}
+
+.custom-radio__input {
+  display: none;
+}
+
+.custom-radio__input + .custom-radio__label {
+  display: block;
+  padding-left: 70px;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-radio__input + .custom-radio__label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid @darkgrey;
+  border-radius: 50%;
+  background-color: @white;
+}
+
+.custom-radio__input:checked + .custom-radio__label::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  background: url("../img/icon-map-marker.svg") no-repeat;
+  background-position: center;
+}

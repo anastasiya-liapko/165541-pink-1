@@ -1,0 +1,244 @@
+.benefits {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: @blue;
+  background-color: @grey;
+}
+
+.benefits__wrapper {
+  .container();
+  position: relative;
+  height: 720px;
+  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+// .benefits__wrapper::before {
+//   content: "";
+//   position: absolute;
+//   top: -70px;
+//   left: 0;
+//   width: 1200px;
+//   height: 94px;
+//   background: url("../img/bg-triangle-white.svg") no-repeat;
+// }
+
+.benefits__title {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+  color: @blue;
+  background-color: @white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.benefits__title-question,
+.benefits__title-answer {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.benefits__item {
+  width: 280px;
+  text-align: center;
+  background-color: @grey;
+}
+
+.benefits__item:nth-child(3) {
+  position: relative;
+  padding-bottom: 300px;
+}
+
+.benefits__item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: 160px;
+  left: 67%;
+  width: 157px;
+  height: 320px;
+  margin-left: -129px;
+  background: url("../img/iphone-screen-mobile@1x.png") no-repeat;
+  background-position: center;
+}
+
+.benefits__item:last-child {
+  display: none;
+}
+
+.benefits__item-title {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: @black;
+}
+
+@media @tablet-widths {
+
+  .benefits__wrapper {
+    height: 855px;
+    padding-top: 35px;
+    box-sizing: border-box;
+  }
+
+  .benefits__wrapper::before {
+    top: -45px;
+  }
+
+  .benefits__title {
+    width: 660px;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 50px;
+    padding-bottom: 55px;
+  }
+
+  .benefits__title-question {
+    margin-bottom: 0;
+  }
+
+  .benefits__title-answer {
+    width: 420px;
+    margin: 0 auto;
+  }
+
+  .benefits__item {
+    width: 620px;
+    padding-left: 310px;
+    padding-top: 0;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .benefits__item:nth-child(1) {
+    padding-top: 15px;
+  }
+
+  .benefits__item:nth-child(3) {
+    padding-bottom: 30px;
+  }
+
+  .benefits__item:last-child {
+    display: block;
+    width: 660px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    padding-left: 330px;
+    padding-right: 20px;
+    background-color: @white;
+  }
+
+  .benefits__item-title {
+    padding-top: 0;
+  }
+
+  .benefits__item:last-child .benefits__item-title {
+    width: 170px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .benefits__link {
+    font-size: 14px;
+    line-height: 24px;
+    color: @red;
+  }
+}
+
+@media @desktop-widths {
+
+  .benefits__wrapper {
+    width: 1200px;
+    padding-left: 130px;
+    padding-right: 130px;
+    height: 1035px;
+    padding-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  .benefits__wrapper::before {
+    top: 0;
+    left: -130px;
+  }
+
+  .benefits__title {
+    width: 1200px;
+    font-size: 50px;
+    line-height: 60px;
+    padding-top: 70px;
+    padding-bottom: 75px;
+    box-sizing: border-box;
+  }
+
+  .benefits__item {
+    width: 240px;
+    padding: 0;
+    padding-top: 340px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .benefits__item:nth-child(1) {
+    padding-top: 340px;
+    margin-left: 40px;
+  }
+
+  .benefits__item:nth-child(3) {
+    margin-right: 40px;
+  }
+
+  .benefits__item:last-child {
+    width: 940px;
+    padding-left: 380px;
+    padding-bottom: 115px;
+    text-align: left;
+    background-color: @grey;
+  }
+
+  .benefits__item-title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .benefits__item:last-child .benefits__item-title {
+    width: 530px;
+    line-height: 30px;
+  }
+
+  .benefits__item-descr {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .benefits__item:last-child .benefits__item-descr {
+    display: block;
+    width: 530px;
+    margin: 25px 0;
+  }
+
+  .benefits__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
