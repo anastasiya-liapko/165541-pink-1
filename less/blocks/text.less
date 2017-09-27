@@ -1,0 +1,61 @@
+.text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: @red;
+  text-transform: uppercase;
+}
+
+.text__label {
+  padding-left: 40px;
+}
+
+.text__label--center {
+  padding-left: 0;
+  text-align: center;
+}
+
+.text__field {
+  width: 280px;
+  height: 200px;
+  // margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid @darkgrey;
+  border-radius: 5px;
+}
+
+.text__field::placeholder {
+  padding: 20px 15px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue;
+}
+
+@media @tablet-widths {
+
+  .text__label {
+    margin: 0;
+  }
+
+  .text__field {
+    width: 500px;
+    height: 190px;
+  }
+}
+
+@media @desktop-widths {
+
+  .text__field {
+    width: 820px;
+    height: 110px;
+  }
+
+  .text__field::placeholder {
+    padding-top: 10px;
+  }
+}
