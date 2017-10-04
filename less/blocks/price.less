@@ -11,7 +11,8 @@
   .container();
   position: relative;
   height: 470px;
-  padding-top: 90px;
+
+  padding-top: 80px;
   box-sizing: border-box;
 }
 
@@ -36,6 +37,7 @@
 .price__table {
   width: 1120px;
   height: 280px;
+  margin-bottom: 25px;
   border: 2px solid @grey;
   transform: translateX(-540px);
 }
@@ -77,6 +79,19 @@
   background-position: center;
 }
 
+.price__tariff--hit::after {
+  content: "ХИТ";
+  position: absolute;
+  top: 10px;
+  left: 567px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  background-position: center;
+  transform: rotate(-45deg);
+}
+
 .price__descr {
   text-align: left;
 }
@@ -94,7 +109,7 @@
   left: 220px;
   width: 35px;
   height: 35px;
-  background: url("../img/icon-no.svg") no-repeat;
+  background: url("../img/icon-yes.svg") no-repeat;
   background-position: center;
 }
 
@@ -105,8 +120,12 @@
   left: 220px;
   width: 35px;
   height: 35px;
-  background: url("../img/icon-yes.svg") no-repeat;
+  background: url("../img/icon-no.svg") no-repeat;
   background-position: center;
+}
+
+.price__tick--descr {
+  font-size: 14px;
 }
 
 @media @tablet-widths {
@@ -163,6 +182,11 @@
     background: url("../img/bg-hit-tablet.svg") no-repeat;
   }
 
+  .price__tariff--hit::after {
+    top: 8px;
+    left: 312px;
+  }
+
   .price__tick::before {
     top: 5px;
     left: 60px;
@@ -171,6 +195,11 @@
   .price__cross::before {
     top: 5px;
     left: 60px;
+  }
+
+  .price__tick--descr,
+  .price__pagination {
+    display: none;
   }
 }
 
@@ -214,10 +243,15 @@
 
   .price__tariff--hit::before {
     top: 2px;
-    left: 467px;
+    left: 468px;
     width: 75px;
     height: 75px;
     background: url("../img/bg-hit.svg") no-repeat;
+  }
+
+  .price__tariff--hit::after {
+    top: 13px;
+    left: 480px;
   }
 
   .price__tick::before {
@@ -228,5 +262,9 @@
   .price__cross::before {
     top: 15px;
     left: 90px;
+  }
+
+  .price__descr {
+    font-size: 18px;
   }
 }
