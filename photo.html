@@ -42,7 +42,11 @@
 
         <article class="album__photo photo photo--day">
           <a class="photo__link photo__link--day">
-            <img class="photo__pict" src="img/panorama-mobile@1x.jpg" width="320px" height="137px" alt="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="photo__pict" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама">
+            </picture>
           </a>
           <blockquote class="photo__comment comment comment--day">
             <h3 class="photo__author author">Анна</h3>
@@ -54,7 +58,11 @@
 
         <article class="album__photo photo">
           <a class="photo__link">
-            <img class="photo__pict" src="img/photo-car-mobile@1x.jpg" width="280px" height="180px" alt="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="photo__pict" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Машина">
+            </picture>
           </a>
           <blockquote class="photo__comment comment">
             <h3 class="photo__author author">Левон</h3>
@@ -66,7 +74,11 @@
 
         <article class="album__photo photo">
           <a class="photo__link">
-            <img class="photo__pict" src="img/photo-drumset-mobile@1x.jpg" width="280px" height="180px" alt="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+              <img class="photo__pict" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Барабанная установка">
+            </picture>
           </a>
           <blockquote class="photo__comment comment">
             <h3 class="photo__author author">Антон</h3>
@@ -78,7 +90,11 @@
 
         <article class="album__photo photo">
           <a class="photo__link">
-            <img class="photo__pict" src="img/photo-window-mobile@1x.jpg" width="280px" height="180px" alt="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+              <img class="photo__pict" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Окно">
+            </picture>
           </a>
           <blockquote class="photo__comment comment">
             <h3 class="photo__author author">Борис</h3>
@@ -90,7 +106,11 @@
 
         <article class="album__photo photo">
           <a class="photo__link">
-            <img class="photo__pict" src="img/photo-fair-mobile@1x.jpg" width="280px" height="180px" alt="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+              <img class="photo__pict" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Ярмарка">
+            </picture>
           </a>
           <blockquote class="photo__comment comment">
             <h3 class="photo__author author">Сергей</h3>
@@ -102,7 +122,11 @@
 
         <article class="album__photo photo">
           <a class="photo__link">
-            <img class="photo__pict" src="img/photo-pov-mobile@1x.jpg" width="280px" height="180px" alt="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+              <img class="photo__pict" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Вид">
+            </picture>
           </a>
           <blockquote class="photo__comment comment">
             <h3 class="photo__author author">Максим</h3>
@@ -114,7 +138,11 @@
 
         <article class="album__photo photo">
           <a class="photo__link">
-            <img class="photo__pict" src="img/photo-wing-mobile@1x.jpg" width="280px" height="180px" alt="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+              <img class="photo__pict" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Крыло">
+            </picture>
           </a>
           <blockquote class="photo__comment comment">
             <h3 class="photo__author author">Надежда</h3>
@@ -130,7 +158,7 @@
       <div class="image-editor__wrapper">
         <h2 class="image-editor__descr descr">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</h2>
         <div class="image-editor__field">
-          <img src="img/photo-road-mobile@1x.jpg" width="280px" height="374px" alt="">
+          <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Редактируемое изображение">
           <form class="image-editor__form" action="https://echo.htmlacademy.ru" method="get">
             <div class="image-editor__range range range--crop range--active">
               <div class="range__scale"></div>
@@ -166,6 +194,7 @@
         </div>
       </div>
     </footer>
+    <script src="picturefill.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
