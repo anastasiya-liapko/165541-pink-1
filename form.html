@@ -9,7 +9,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html">
-        <img src="img/logo-pink-white-mobile.svg" width="80px" height="30px" alt="Пинк">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+          <img src="img/logo-pink-white-mobile.svg" width="80px" height="30px" alt="Пинк">
+        </picture>
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -43,16 +47,16 @@
         </p>
         <form class="form__field" action="https://echo.htmlacademy.ru" method="get">
 
-          <fieldset class="form__section text">
+          <fieldset class="form__section form__section--name text">
             <label class="text__label" for="last-name">Фамилия:</label>
             <input class="text__input input" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
             <label class="text__label" for="firs-name">Имя:</label>
-            <input class="text__input input" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
+            <input class="text__input input input--long" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
             <label class="text__label" for="middle-name">Отчество:</label>
             <input class="text__input input" type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
           </fieldset>
 
-          <fieldset class="form__section form__section--grey">
+          <fieldset class="form__section form__section--achievements form__section--grey">
             <legend class="form__section-title">Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__section-list">
               <li class="custom-checkbox">
@@ -82,15 +86,15 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__section text">
+          <fieldset class="form__section form__section--contacts text">
             <legend class="form__section-title form__section-title--hidden">Контактная информация</legend>
-            <label class="text__label" for="tel">Номер телефона</label>
-            <input class="text__input input" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста">
-            <label class="text__label" for="email">Адрес почты</label>
-            <input class="text__input input" type="email" id="email" name="email" placeholder="Введите почту*" required>
+            <label class="text__label text__label--low" for="tel">Номер телефона</label>
+            <input class="text__input input input--short input--left" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста">
+            <label class="text__label text__label--low text__label--right" for="email">Адрес почты</label>
+            <input class="text__input input input--short input--right" type="email" id="email" name="email" placeholder="Введите почту*" required>
           </fieldset>
 
-          <fieldset class="form__section form__section--grey">
+          <fieldset class="form__section form__section--app form__section--grey">
             <legend class="form__section-title">С каким приложением путешествовали?</legend>
             <ul class="form__section-list">
               <li class="custom-radio">
@@ -108,7 +112,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__section text">
+          <fieldset class="form__section form__section--comment text">
             <legend class="form__section-title  form__section-title--white">Опишите свои эмоции</legend>
             <textarea class="text__field" id="textarea" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
@@ -123,7 +127,10 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img src="img/logo-pink-blue-mobile.svg" width="145px" height="50px" alt="Пинк">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+            <img src="img/logo-pink-blue-mobile.svg" width="145px" height="50px" alt="Пинк">
+          </picture>
         </div>
         <div class="page-footer__social">
           <a class="social-link social-link--tw" href="#">Твиттер</a>
@@ -135,6 +142,7 @@
         </div>
       </div>
     </footer>
+    <script src="picturefill.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

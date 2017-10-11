@@ -1,12 +1,12 @@
 .range {
   position: relative;
-  display: none;
+  // display: none;
   height: 100px;
 }
 
-.range--active {
-  display: block;
-}
+// .range--active {
+//   display: block;
+// }
 
 .range--crop::before {
   content: "";
@@ -22,7 +22,7 @@
 .range--fill::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -50px;
   left: 100px;
   width: 50px;
   height: 50px;
@@ -33,7 +33,7 @@
 .range--contrast::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -100px;;
   left: 200px;
   width: 50px;
   height: 50px;

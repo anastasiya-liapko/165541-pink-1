@@ -22,11 +22,46 @@
 @media @tablet-widths {
 
   .input {
+    position: relative;
     flex-grow: 1;
+    width: 525px;
     margin: 0;
+    margin-bottom: 50px;
+    margin-left: auto;
   }
+
+  .input--long {
+    width: 565px;
+  }
+
+  .input--short {
+    width: 440px;
+    margin: 0;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    margin-right: 60px;
+  }
+
 }
 
 @media @desktop-widths {
+
+  .input {
+    width: 335px;
+  }
+
+  .input--long {
+    width: 375px;
+  }
+
+  .input--short {
+    width: 315px;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .input--right {
+    margin-left: 120px;
+  }
 
 }

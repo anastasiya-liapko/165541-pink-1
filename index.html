@@ -6,10 +6,19 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- <svg style="display:none">
+      <symbol viewBox="0 0 595.28 61.905" id="bg-triangle-white-footer">
+          <polygon fill="#000000" points="297.64,61.905 0,0 595.28,0 "/>
+      </symbol>
+    </svg> -->
     <header class="page-header">
       <div class="page-header__wrapper">
       <a class="page-header__logo">
-        <img src="img/logo-pink-white-mobile.svg" width="80px" height="30px" alt="Пинк">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+          <img src="img/logo-pink-white-mobile.svg" width="80px" height="30px" alt="Пинк">
+        </picture>
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -157,7 +166,10 @@
     <footer class="page-footer page-footer--index">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img src="img/logo-pink-blue-mobile.svg" width="145px" height="50px" alt="Пинк">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+            <img src="img/logo-pink-blue-mobile.svg" width="145px" height="50px" alt="Пинк">
+          </picture>
         </div>
         <div class="page-footer__social">
           <a class="social-link social-link--tw" href="#">Твиттер</a>
@@ -169,6 +181,7 @@
         </div>
       </div>
     </footer>
+    <script src="picturefill.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
