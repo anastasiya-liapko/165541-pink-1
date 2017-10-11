@@ -1,5 +1,17 @@
 .social-link {
+  position: relative;
   font-size: 0;
+}
+
+.social-link::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 45px;
+  height: 45px;
+  border: 3px solid @mediumgrey;
+  border-radius: 50%;
 }
 
 .social-link--tw {

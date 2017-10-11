@@ -38,8 +38,42 @@
 
 @media @tablet-widths {
 
+  .text::before {
+    content: "";
+    position: absolute;
+    top: 947px;
+    left: 500px;
+    width: 64px;
+    height: 64px;
+    background-color: @darkgrey;
+    background-image: url('../img/icon-mail.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .text::after {
+    content: "";
+    position: absolute;
+    top: 821px;
+    left: 500px;
+    width: 64px;
+    height: 64px;
+    background-color: @darkgrey;
+    background-image: url('../img/icon-phone.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .text__label {
+    position: absolute;
     margin: 0;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .text__label--low {
+    margin-top: 75px;
+    margin-left: 35px;
   }
 
   .text__field {
@@ -49,6 +83,24 @@
 }
 
 @media @desktop-widths {
+
+  .text::before {
+    top: 486px;
+    left: 953px;
+  }
+
+  .text::after {
+    top: 486px;
+    left: 510px;
+  }
+
+  .text__label--low {
+    margin-top: 70px;
+  }
+
+  .text__label--right {
+    margin-left: 140px;
+  }
 
   .text__field {
     width: 820px;

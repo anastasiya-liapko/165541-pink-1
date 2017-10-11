@@ -17,10 +17,23 @@
 
 .reviews__wrapper {
   .container();
+  position: relative;
   height: 355px;
   padding: 15px 20px;
   padding-top: 45px;
   box-sizing: border-box;
+}
+
+.reviews__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 1200px;
+  height: 94px;
+  background: url("../img/bg-triangle-white.svg") no-repeat;
+  // background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1200px" height="94.074px" viewBox="0 0 1200 94.074" enable-background="new 0 0 1200 94.074" xml:space="preserve"><polygon fill="#ffffff" points="1200,0 0,0 0,94.074 "/></svg>');
+  background-repeat: no-repeat;
 }
 
 .reviews__title {
@@ -73,6 +86,18 @@
     padding-top: 35px;
   }
 
+  .reviews__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 260px;
+    left: 0;
+    width: 1200px;
+    height: 94px;
+    background: url("../img/bg-triangle-white.svg") no-repeat;
+    // background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1200px" height="94.074px" viewBox="0 0 1200 94.074" enable-background="new 0 0 1200 94.074" xml:space="preserve"><polygon fill="#ffffff" points="1200,0 0,0 0,94.074 "/></svg>');
+    background-repeat: no-repeat;
+  }
+
   .reviews__author-name {
     order: 0;
     margin-top: 20px;
@@ -96,6 +121,13 @@
     justify-content: space-between;
     height: 415px;
     padding: 15px 130px;
+  }
+
+  .reviews__wrapper::before {
+    top: 300px;
+    width: 1400px;
+    height: 294px;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1400px" height="294.074px" viewBox="0 0 1200 94.074" enable-background="new 0 0 1200 94.074" xml:space="preserve"><polygon fill="#ffffff" points="1200,0 0,0 0,94.074 "/></svg>');
   }
 
   .reviews__prev,
@@ -152,7 +184,20 @@
   }
 
   .reviews__item {
+    position: relative;
     padding-top: 150px;
+  }
+
+  .reviews__item::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 300px;
+    width: 100px;
+    height: 100px;
+    background: url(../img/icon-quotes.svg) no-repeat;
+    background-position: center;
+
   }
 
   .reviews__item p {

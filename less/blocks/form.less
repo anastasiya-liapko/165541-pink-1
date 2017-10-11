@@ -86,7 +86,7 @@
   box-sizing: border-box;
 }
 
-.form__section:nth-child(1) {
+.form__section--name {
   height: 370px;
   padding-bottom: 30px;
 }
@@ -95,7 +95,7 @@
   height: 605px;
 }
 
-.form__section:nth-child(3) {
+.form__section--contacts {
   height: 290px;
   padding-top: 30px;
 }
@@ -121,10 +121,12 @@
   .form__wrapper {
     padding: 50px 20px;
     padding-bottom: 40px;
+    margin-bottom: 55px;
     box-sizing: border-box;
   }
 
   .form__field {
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     height: 2140px;
@@ -139,11 +141,11 @@
     width: 620px;
   }
 
-  .form__section:nth-child(1) {
+  .form__section--name {
     order: -3;
-    flex-direction: row;
-    flex-wrap: wrap;
     height: 300px;
+    margin-bottom: 35px;
+    padding-top: 40px;
   }
 
   .form__section:nth-child(2) {
@@ -153,7 +155,7 @@
     border: 2px solid @darkgrey;
   }
 
-  .form__section:nth-child(3) {
+  .form__section--contacts {
     order: -1;
     height: 320px;
     margin-top: 50px;
@@ -178,6 +180,7 @@
 
   .form__section-title {
     padding: 0 60px;
+    font-size: 14px;
     line-height: 30px;
     background-color: @white;
     box-sizing: border-box;
@@ -200,6 +203,7 @@
 @media @desktop-widths {
 
   .form__wrapper {
+    margin-bottom: 5px;
     padding: 0;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -225,7 +229,7 @@
   }
 
   .form__section:nth-child(2),
-  .form__section:nth-child(3),
+  .form__section--contacts,
   .form__section:nth-child(5) {
     width: 100%;
     margin-top: 60px;
@@ -235,25 +239,30 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: 240px;
+    margin-top: 50px;
   }
 
-  .form__section:nth-child(3) {
-    height: 170px;
-    flex-direction: row;
+  .form__section--contacts {
+    display: inline-block;
+    height: 180px;
+    margin-top: 40px;
   }
 
   .form__section:nth-child(5) {
     height: 225px;
   }
 
-  .form__section:nth-child(1) {
+  .form__section--name {
     width: 470px;
     height: 310px;
-    margin-top: 30px;
+    margin-left: 0;
+    margin-top: 25px;
+    padding-right: 40px;
+    box-sizing: border-box;
   }
 
-  .form__section:nth-child(4) {
-    width: 470px;
+  .form__section--app {
+    width: 435px;
     height: 310px;
     margin-top: 30px;
   }

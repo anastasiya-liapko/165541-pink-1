@@ -10,8 +10,10 @@
   text-decoration: none;
   color: @white;
   text-align: center;
+  border: 3px solid @white;
+  border-radius: 50px;
   box-sizing: border-box;
-  background-color: red;
+  background-color: transparent;
 }
 
 .btn--green {
@@ -23,6 +25,16 @@
   border: none;
   border-radius: 3px;
   background-color: @green;
+}
+
+.btn--red {
+  color: @red;
+  border-color: @red;
+}
+
+.btn--grey {
+  color: @darkgrey;
+  border-color: @darkgrey;
 }
 
 @media @tablet-widths {
@@ -38,6 +50,16 @@
     margin-top: 65px;
     padding: 10px 15px;
     line-height: 30px;
+  }
+
+  .btn--red {
+    width: 262px;
+    margin: 0 auto;
+  }
+
+  .btn--grey {
+    width: 262px;
+    margin: 0 auto;
   }
 }
 
