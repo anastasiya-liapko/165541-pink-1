@@ -1,15 +1,20 @@
 (function(window) {
+	/*jshint eqnull:true */
 	var ua = navigator.userAgent;
 
 	if ( window.HTMLPictureElement && ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45) ) {
 		addEventListener("resize", (function() {
 			var timer;
+
 			var dummySrc = document.createElement("source");
+
 			var fixRespimg = function(img) {
 				var source, sizes;
 				var picture = img.parentNode;
+
 				if (picture.nodeName.toUpperCase() === "PICTURE") {
 					source = dummySrc.cloneNode();
+
 					picture.insertBefore(source, picture.firstElementChild);
 					setTimeout(function() {
 						picture.removeChild(source);
@@ -23,6 +28,7 @@
 					});
 				}
 			};
+
 			var findPictureImgs = function() {
 				var i;
 				var imgs = document.querySelectorAll("picture > img, img[srcset][sizes]");
@@ -37,30 +43,38 @@
 			var mq = window.matchMedia && matchMedia("(orientation: landscape)");
 			var init = function() {
 				onResize();
+
 				if (mq && mq.addListener) {
 					mq.addListener(onResize);
 				}
 			};
+
 			dummySrc.srcset = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+
 			if (/^[c|i]|d$/.test(document.readyState || "")) {
 				init();
 			} else {
 				document.addEventListener("DOMContentLoaded", init);
 			}
+
 			return onResize;
 		})());
 	}
 })(window);
+
 /*! Picturefill - v3.0.2
  * http://scottjehl.github.io/picturefill
  * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
  *  License: MIT
  */
+
 (function( window, document, undefined ) {
 	// Enable strict mode
 	"use strict";
+
 	// HTML shim|v it for old IE (IE9 will still need the HTML video tag workaround)
 	document.createElement( "picture" );
+
 	var warn, eminpx, alwaysCheckWDescriptor, evalId;
 	// local object for method references and testing exposure
 	var pf = {};
@@ -1512,7 +1526,10 @@
 		// AMD support
 		define( "picturefill", function() { return picturefill; } );
 	}
-  if ( !pf.supPicture ) {
-	  types[ "image/webp" ] = detectTypeSupport("image/webp", "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==" );
-  }
-})( window, document );
+
+	// IE8 evals this sync, so it must be the last thing we do
+	if ( !pf.supPicture ) {
+		types[ "image/webp" ] = detectTypeSupport("image/webp", "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==" );
+	}
+
+} )( window, document );
