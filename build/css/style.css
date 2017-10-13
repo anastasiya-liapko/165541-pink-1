@@ -2055,6 +2055,10 @@ img {
     left: 50%;
     margin-left: -270px;
   }
+  .btn {
+    padding: 15px 25px;
+    font-size: 21px;
+  }
   .benefits__wrapper {
     width: 1200px;
   }
