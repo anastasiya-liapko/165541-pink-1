@@ -370,7 +370,7 @@ img {
   width: 157px;
   height: 320px;
   margin-left: -129px;
-  background: url("../img/iphone-screen-mobile@1x.png") no-repeat;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
   background-position: center;
 }
 .benefits__item:last-child {
@@ -1427,6 +1427,8 @@ img {
             box-sizing: border-box;
   }
   .benefits__wrapper::before {
+    content: "";
+    position: absolute;
     top: -45px;
   }
   .benefits__title {
@@ -1458,11 +1460,13 @@ img {
     padding-bottom: 30px;
   }
   .benefits__item:nth-child(3)::before {
+    content: "";
+    position: absolute;
     top: -330px;
     left: 130px;
-    width: 100%;
+    width: 268px;
     height: 481px;
-    background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat;
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
   }
   .benefits__item:last-child {
     position: relative;
@@ -1997,15 +2001,15 @@ img {
 @media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx) {
   .page-title {
     background-image: url("../img/bg-back-tablet@2x.jpg");
-    background-size: 2400px auto;
+    background-size: 1200px auto;
   }
   .page-title--index::before {
     background-image: url("../img/iphone-hand-tablet@2x.png");
-    background-size: 1400px auto;
+    background-size: 700px auto;
   }
   .benefits__item:nth-child(3)::before {
     background-image: url("../img/iphone-screen-3-tablet@2x.png");
-    background-size: 536px auto;
+    background-size: 268px auto;
   }
 }
 @media (min-width: 1200px) {
@@ -2138,6 +2142,8 @@ img {
             box-sizing: border-box;
   }
   .benefits__wrapper::before {
+    content: "";
+    position: absolute;
     top: -100px;
     left: -130px;
     width: 1400px;
@@ -2171,19 +2177,23 @@ img {
     position: absolute;
     top: 0;
     left: -25px;
-    width: 100%;
+    width: 292px;
     height: 302px;
-    background: url("../img/iphone-screen-1-desktop@1x.png") no-repeat;
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    background-repeat: no-repeat;
   }
   .benefits__item:nth-child(3) {
     margin-right: 40px;
   }
   .benefits__item:nth-child(3)::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 105px;
-    width: 100%;
+    width: 292px;
     height: 302px;
-    background: url("../img/iphone-screen-3-desktop@1x.png") no-repeat;
+    background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    background-repeat: no-repeat;
   }
   .benefits__item:nth-child(2) {
     position: relative;
@@ -2193,9 +2203,10 @@ img {
     position: absolute;
     top: 0;
     left: -20px;
-    width: 100%;
+    width: 292px;
     height: 302px;
-    background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat;
+    background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    background-repeat: no-repeat;
   }
   .benefits__item:last-child {
     width: 940px;
@@ -2705,23 +2716,23 @@ img {
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
   .page-title {
     background-image: url("../img/bg-back-desktop@2x.jpg");
-    background-size: 5120px auto;
+    background-size: 2560px auto;
   }
   .page-title--index::before {
     background-image: url("../img/iphone-hand-desktop@2x.png");
-    background-size: 2100px auto;
+    background-size: 1050px auto;
   }
   .benefits__item:nth-child(1)::before {
     background-image: url("../img/iphone-screen-1-desktop@2x.png");
-    background-size: 584px auto;
+    background-size: 292px auto;
   }
   .benefits__item:nth-child(3)::before {
     background-image: url("../img/iphone-screen-3-desktop@2x.png");
-    background-size: 584px auto;
+    background-size: 292px auto;
   }
   .benefits__item:nth-child(2)::before {
     background-image: url("../img/iphone-screen-2-desktop@2x.png");
-    background-size: 584px auto;
+    background-size: 292px auto;
   }
 }
 @media (max-width: 1199px) {
@@ -2739,14 +2750,14 @@ img {
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .page-title {
     background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 1400px auto;
+    background-size: 700px auto;
   }
   .page-title--index::before {
     background-image: url("../img/iphone-hand-mobile@2x.png");
-    background-size: 516px auto;
+    background-size: 258px auto;
   }
   .benefits__item:nth-child(3)::before {
     background-image: url("../img/iphone-screen-mobile@2x.png");
-    background-size: 314px auto;
+    background-size: 157px auto;
   }
 }
