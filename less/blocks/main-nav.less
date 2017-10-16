@@ -1,6 +1,5 @@
 .main-nav {
   position: relative;
-
   margin: 0 auto;
 }
 
@@ -24,14 +23,6 @@
   cursor: pointer;
 
   border: none;
-
-  &:hover {
-
-  }
-
-  &:active {
-
-  }
 }
 
 .main-nav--closed .main-nav__toggle::before {
@@ -59,10 +50,8 @@
   &::after {
     content: "";
     position: absolute;
-
     width: 30px;
     height: 4px;
-
     background-color: #ffffff;
   }
 
@@ -115,16 +104,6 @@
               inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
 }
 
-.main-nav__item a[href] {
-  &:hover {
-
-  }
-
-  &:active {
-
-  }
-}
-
 @media @tablet-widths {
 
   .main-nav__toggle {
@@ -139,10 +118,6 @@
   .main-nav--closed .main-nav__item {
     display: none;
   }
-
-  // .main-nav--nojs .main-nav__toggle {
-  //   display: none;
-  // }
 
   .main-nav--nojs .main-nav__wrapper {
     position: static;
