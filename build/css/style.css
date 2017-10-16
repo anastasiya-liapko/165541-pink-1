@@ -370,7 +370,7 @@ img {
   width: 157px;
   height: 320px;
   margin-left: -129px;
-  background: url("../img/iphone-screen-mobile@1x.png") no-repeat;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
   background-position: center;
 }
 .benefits__item:last-child {
@@ -905,7 +905,7 @@ img {
 }
 .form__section-title {
   padding: 30px 50px;
-  padding-bottom: 30px;
+  -ms-margin-top: -60px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1191,8 +1191,8 @@ img {
 .range--crop::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 35px;
+  left: 25px;
   width: 50px;
   height: 50px;
   background: url("../img/icon-editor-crop.svg") no-repeat;
@@ -1201,8 +1201,8 @@ img {
 .range--fill::before {
   content: "";
   position: absolute;
-  top: -50px;
-  left: 100px;
+  top: -60px;
+  left: 110px;
   width: 50px;
   height: 50px;
   background: url("../img/icon-editor-fill.svg") no-repeat;
@@ -1211,45 +1211,86 @@ img {
 .range--contrast::before {
   content: "";
   position: absolute;
-  top: -100px;
-  left: 200px;
+  top: -110px;
+  left: 190px;
   width: 50px;
   height: 50px;
   background: url("../img/icon-editor-contrast.svg") no-repeat;
   background-position: center;
 }
+.range__scale {
+  display: none;
+  width: 240px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #283645;
+}
+.range__scale::before {
+  content: "";
+  position: absolute;
+  top: 160px;
+  left: -20px;
+  width: 320px;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.range__toggle {
+  display: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  margin-left: 210px;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.range__scale--active {
+  display: block;
+  margin-top: 120px;
+}
+.range__toggle--active {
+  display: block;
+}
 .input {
   width: 280px;
-  height: 60px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 25px;
   border: 2px solid #e5e5e5;
   border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .input::-webkit-input-placeholder {
-  padding-top: 5px;
-  padding-left: 20px;
+  padding-top: 10px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
   color: #283645;
 }
 .input:-ms-input-placeholder {
-  padding-top: 5px;
-  padding-left: 20px;
+  padding-top: 10px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
   color: #283645;
 }
 .input::placeholder {
-  padding-top: 5px;
-  padding-left: 20px;
+  padding-top: 10px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #283645;
+}
+.input::-ms-input-placeholder.input {
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1272,6 +1313,74 @@ img {
 }
 .slider__pagination-item--active {
   border: 3px solid #000000;
+}
+.modal {
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  -webkit-box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.modal--error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  display: none;
+  margin-top: -350px;
+  margin-left: -160px;
+  background-color: #ffffff;
+}
+.modal--success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  height: 390px;
+  display: none;
+  margin-top: 50px;
+  margin-left: -160px;
+  background-color: #ffffff;
+  background-color: #f2f2f2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.modal__title {
+  display: inline-block;
+  margin: 0;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.modal__text {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 27px;
+  padding-right: 27px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.modal__close--grey {
+  margin-top: 40px;
 }
 @media (min-width: 660px) {
   .page-header__wrapper {
@@ -1392,6 +1501,8 @@ img {
             box-sizing: border-box;
   }
   .benefits__wrapper::before {
+    content: "";
+    position: absolute;
     top: -45px;
   }
   .benefits__title {
@@ -1423,11 +1534,14 @@ img {
     padding-bottom: 30px;
   }
   .benefits__item:nth-child(3)::before {
+    content: "";
+    position: absolute;
     top: -330px;
     left: 130px;
-    width: 100%;
+    width: 268px;
     height: 481px;
-    background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat;
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    background-repeat: no-repeat;
   }
   .benefits__item:last-child {
     position: relative;
@@ -1801,10 +1915,10 @@ img {
   .text::before {
     content: "";
     position: absolute;
-    top: 947px;
-    left: 500px;
-    width: 64px;
-    height: 64px;
+    top: 940px;
+    left: 496px;
+    width: 60px;
+    height: 60px;
     background-color: #e5e5e5;
     background-image: url('../img/icon-mail.svg');
     background-repeat: no-repeat;
@@ -1814,9 +1928,9 @@ img {
     content: "";
     position: absolute;
     top: 821px;
-    left: 500px;
-    width: 64px;
-    height: 64px;
+    left: 496px;
+    width: 60px;
+    height: 60px;
     background-color: #e5e5e5;
     background-image: url('../img/icon-phone.svg');
     background-repeat: no-repeat;
@@ -1887,31 +2001,56 @@ img {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10px;
     width: 50px;
     height: 50px;
-    background: url("../img/icon-editor-crop.svg") no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path fill="none" d="M0,0h48v48H0V0z"/><path fill="rgb(210, 40, 86)" d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/></svg>');
+    background-repeat: no-repeat;
     background-position: center;
   }
   .range--fill::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10px;
     width: 50px;
     height: 50px;
-    background: url("../img/icon-editor-fill.svg") no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path fill="none" d="M0,0h48v48H0V0z"/><path fill="rgb(210, 40, 86)" d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/><rect fill="rgb(210, 40, 86)" y="40" width="48" height="3"/></svg>');
+    background-repeat: no-repeat;
     background-position: center;
   }
   .range--contrast::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10px;
     width: 50px;
     height: 50px;
-    background: url("../img/icon-editor-contrast.svg") no-repeat;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve"><path fill="rgb(210, 40, 86)" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/><path fill="rgb(210, 40, 86)" d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/></svg>');
+    background-repeat: no-repeat;
     background-position: center;
+  }
+  .range__scale {
+    display: block;
+    width: 200px;
+    margin-top: 25px;
+  }
+  .range__scale::before {
+    top: 65px;
+    left: 22px;
+    width: 275px;
+  }
+  .range__toggle {
+    display: block;
+  }
+  .range__toggle--active {
+    margin-left: 170px;
+  }
+  .range__toggle--medium {
+    margin-left: 50px;
+  }
+  .range__toggle--bottom {
+    margin-left: 120px;
   }
   .input {
     position: relative;
@@ -1922,6 +2061,7 @@ img {
     margin: 0;
     margin-bottom: 50px;
     margin-left: auto;
+    padding: 20px;
   }
   .input--long {
     width: 565px;
@@ -1933,19 +2073,54 @@ img {
     margin-left: 15px;
     margin-right: 60px;
   }
+  .modal {
+    height: 365px;
+    width: 460px;
+  }
+  .modal--error {
+    margin-top: -400px;
+    margin-left: -230px;
+  }
+  .modal--success {
+    height: 430px;
+    margin-top: 0;
+    margin-left: -230px;
+  }
+  .modal__close {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .modal__close--grey {
+    margin-top: 50px;
+  }
+  .modal__title {
+    padding-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .modal__text {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-size: 18px;
+  }
 }
 @media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 1.5dppx) {
   .page-title {
     background-image: url("../img/bg-back-tablet@2x.jpg");
-    background-size: 2400px auto;
+    background-size: 1200px auto;
   }
   .page-title--index::before {
     background-image: url("../img/iphone-hand-tablet@2x.png");
-    background-size: 1400px auto;
+    background-size: 700px auto;
   }
   .benefits__item:nth-child(3)::before {
     background-image: url("../img/iphone-screen-3-tablet@2x.png");
-    background-size: 536px auto;
+    background-size: 268px auto;
   }
 }
 @media (min-width: 1200px) {
@@ -1959,10 +2134,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0 130px;
+    padding-top: 25px;
+    padding-left: 130px;
+    padding-right: 130px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -2055,6 +2229,10 @@ img {
     left: 50%;
     margin-left: -270px;
   }
+  .btn {
+    padding: 15px 25px;
+    font-size: 21px;
+  }
   .benefits__wrapper {
     width: 1200px;
   }
@@ -2074,6 +2252,8 @@ img {
             box-sizing: border-box;
   }
   .benefits__wrapper::before {
+    content: "";
+    position: absolute;
     top: -100px;
     left: -130px;
     width: 1400px;
@@ -2107,19 +2287,23 @@ img {
     position: absolute;
     top: 0;
     left: -25px;
-    width: 100%;
+    width: 292px;
     height: 302px;
-    background: url("../img/iphone-screen-1-desktop@1x.png") no-repeat;
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    background-repeat: no-repeat;
   }
   .benefits__item:nth-child(3) {
     margin-right: 40px;
   }
   .benefits__item:nth-child(3)::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 105px;
-    width: 100%;
+    width: 292px;
     height: 302px;
-    background: url("../img/iphone-screen-3-desktop@1x.png") no-repeat;
+    background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    background-repeat: no-repeat;
   }
   .benefits__item:nth-child(2) {
     position: relative;
@@ -2129,9 +2313,10 @@ img {
     position: absolute;
     top: 0;
     left: -20px;
-    width: 100%;
+    width: 292px;
     height: 302px;
-    background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat;
+    background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    background-repeat: no-repeat;
   }
   .benefits__item:last-child {
     width: 940px;
@@ -2335,15 +2520,13 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
     height: 870px;
-    padding-left: 100px;
-    padding-right: 100px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
   .contacts__title {
     width: 480px;
     margin: 0 auto;
-    padding: 60px 150px;
+    padding: 60px 360px;
     padding-bottom: 10px;
     font-size: 50px;
   }
@@ -2353,12 +2536,18 @@ img {
   .contacts__item h3 {
     margin-bottom: 30px;
   }
+  .contacts__item:nth-child(2) {
+    margin-left: 100px;
+  }
   .contacts__item:nth-child(3) {
     width: 280px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
     margin-top: 25px;
+  }
+  .contacts__item:nth-child(4) {
+    margin-right: 100px;
   }
   .contacts__map {
     width: 1200px;
@@ -2373,7 +2562,7 @@ img {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1260px" height="762px" viewBox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905" xml:space="preserve"><polygon fill="#ffffff" points="297.64,61.905 0,0 595.28,0 "/></svg>');
   }
   .contacts__map iframe {
-    width: 1200px;
+    width: 100%;
     height: 505px;
   }
   .page-footer__wrapper {
@@ -2552,12 +2741,12 @@ img {
     padding: 0 30px;
   }
   .text::before {
-    top: 486px;
-    left: 953px;
+    top: 485px;
+    left: 943px;
   }
   .text::after {
-    top: 486px;
-    left: 510px;
+    top: 485px;
+    left: 506px;
   }
   .text__label--low {
     margin-top: 70px;
@@ -2589,6 +2778,40 @@ img {
   .range {
     width: 100%;
   }
+  .range--fill {
+    margin-top: -60px;
+  }
+  .range--contrast {
+    margin-top: -65px;
+  }
+  .range--crop::before {
+    left: 0;
+    background: url("../img/icon-editor-crop.svg") no-repeat;
+  }
+  .range--fill::before {
+    left: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path fill="none" d="M0,0h48v48H0V0z"/><path fill="rgb(210, 40, 86)" d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/><rect fill="rgb(210, 40, 86)" y="40" width="48" height="3"/></svg>');
+  }
+  .range--contrast::before {
+    left: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve"><path fill="rgb(210, 40, 86)" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/><path fill="rgb(210, 40, 86)" d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/></svg>');
+  }
+  .range__scale {
+    width: 295px;
+  }
+  .range__scale::before {
+    left: 0;
+    width: 410px;
+  }
+  .range__toggle--active {
+    margin-left: 110px;
+  }
+  .range__toggle--medium {
+    margin-left: 280px;
+  }
+  .range__toggle--bottom {
+    margin-left: 190px;
+  }
   .input {
     width: 335px;
   }
@@ -2603,27 +2826,46 @@ img {
   .input--right {
     margin-left: 120px;
   }
+  .modal--success {
+    width: 785px;
+    height: 385px;
+    margin-left: -393px;
+  }
+  .modal__text--wide {
+    padding-left: 201px;
+    padding-right: 201px;
+  }
+  .modal__title--wide {
+    padding-left: 194px;
+    padding-right: 194px;
+  }
+  .modal__close {
+    width: 300px;
+  }
+  .modal__close--grey {
+    width: 460px;
+  }
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
   .page-title {
     background-image: url("../img/bg-back-desktop@2x.jpg");
-    background-size: 5120px auto;
+    background-size: 2560px auto;
   }
   .page-title--index::before {
     background-image: url("../img/iphone-hand-desktop@2x.png");
-    background-size: 2100px auto;
+    background-size: 1050px auto;
   }
   .benefits__item:nth-child(1)::before {
     background-image: url("../img/iphone-screen-1-desktop@2x.png");
-    background-size: 584px auto;
+    background-size: 292px auto;
   }
   .benefits__item:nth-child(3)::before {
     background-image: url("../img/iphone-screen-3-desktop@2x.png");
-    background-size: 584px auto;
+    background-size: 292px auto;
   }
   .benefits__item:nth-child(2)::before {
     background-image: url("../img/iphone-screen-2-desktop@2x.png");
-    background-size: 584px auto;
+    background-size: 292px auto;
   }
 }
 @media (max-width: 1199px) {
@@ -2636,19 +2878,5 @@ img {
   }
   .main-nav--nojs .main-nav__item {
     display: block;
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .page-title {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 1400px auto;
-  }
-  .page-title--index::before {
-    background-image: url("../img/iphone-hand-mobile@2x.png");
-    background-size: 516px auto;
-  }
-  .benefits__item:nth-child(3)::before {
-    background-image: url("../img/iphone-screen-mobile@2x.png");
-    background-size: 314px auto;
   }
 }

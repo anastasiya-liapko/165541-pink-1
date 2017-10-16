@@ -1,0 +1,140 @@
+.modal {
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.modal--error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  display: none;
+  margin-top: -350px;
+  margin-left: -160px;
+  background-color: @white;
+}
+
+.modal--success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  height: 390px;
+  display: none;
+  margin-top: 50px;
+  margin-left: -160px;
+  background-color: @white;
+  background-color: @grey;
+  box-sizing: border-box;
+}
+
+.modal__title {
+  display: inline-block;
+  margin: 0;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: @black;
+  background-color: @white;
+  box-sizing: border-box;
+}
+
+.modal__text {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 27px;
+  padding-right: 27px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: @blue;
+  background-color: @white;
+  box-sizing: border-box;
+}
+
+.modal__close--grey {
+  margin-top: 40px;
+}
+
+@media @tablet-widths {
+
+  .modal {
+    height: 365px;
+    width: 460px;
+  }
+
+  .modal--error {
+    margin-top: -400px;
+    margin-left: -230px;
+  }
+
+  .modal--success {
+    height: 430px;
+    margin-top: 0;
+    margin-left: -230px;
+  }
+
+  .modal__close {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .modal__close--grey {
+    margin-top: 50px;
+  }
+
+  .modal__title {
+    padding-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal__text {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-size: 18px;
+  }
+}
+
+@media @desktop-widths {
+
+  .modal--success {
+    width: 785px;
+    height: 385px;
+    margin-left: -393px;
+  }
+
+  .modal__text--wide {
+    padding-left: 201px;
+    padding-right: 201px;
+  }
+
+  .modal__title--wide {
+    padding-left: 194px;
+    padding-right: 194px;
+  }
+
+  .modal__close {
+    width: 300px;
+  }
+
+  .modal__close--grey {
+    width: 460px;
+  }
+}
