@@ -903,24 +903,6 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.form__section-title {
-  padding: 30px 50px;
-  padding-bottom: 30px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #d22856;
-  text-align: center;
-  background-color: #f2f2f2;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.form__section-title--white {
-  margin-bottom: -20px;
-  padding-bottom: 0;
-  background-color: #ffffff;
-}
 .form__section-title--hidden {
   display: none;
 }
@@ -1255,36 +1237,42 @@ img {
 }
 .input {
   width: 280px;
-  height: 60px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 25px;
   border: 2px solid #e5e5e5;
   border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .input::-webkit-input-placeholder {
-  padding-top: 5px;
-  padding-left: 20px;
+  padding-top: 10px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
   color: #283645;
 }
 .input:-ms-input-placeholder {
-  padding-top: 5px;
-  padding-left: 20px;
+  padding-top: 10px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
   color: #283645;
 }
 .input::placeholder {
-  padding-top: 5px;
-  padding-left: 20px;
+  padding-top: 10px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #283645;
+}
+.input::-ms-input-placeholder.input {
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1840,10 +1828,10 @@ img {
   .text::before {
     content: "";
     position: absolute;
-    top: 947px;
-    left: 500px;
-    width: 64px;
-    height: 64px;
+    top: 940px;
+    left: 496px;
+    width: 60px;
+    height: 60px;
     background-color: #e5e5e5;
     background-image: url('../img/icon-mail.svg');
     background-repeat: no-repeat;
@@ -1853,9 +1841,9 @@ img {
     content: "";
     position: absolute;
     top: 821px;
-    left: 500px;
-    width: 64px;
-    height: 64px;
+    left: 496px;
+    width: 60px;
+    height: 60px;
     background-color: #e5e5e5;
     background-image: url('../img/icon-phone.svg');
     background-repeat: no-repeat;
@@ -1986,6 +1974,7 @@ img {
     margin: 0;
     margin-bottom: 50px;
     margin-left: auto;
+    padding: 20px;
   }
   .input--long {
     width: 565px;
@@ -2023,10 +2012,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0 130px;
+    padding-top: 25px;
+    padding-left: 130px;
+    padding-right: 130px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -2410,15 +2398,13 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
     height: 870px;
-    padding-left: 100px;
-    padding-right: 100px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
   .contacts__title {
     width: 480px;
     margin: 0 auto;
-    padding: 60px 150px;
+    padding: 60px 360px;
     padding-bottom: 10px;
     font-size: 50px;
   }
@@ -2428,12 +2414,18 @@ img {
   .contacts__item h3 {
     margin-bottom: 30px;
   }
+  .contacts__item:nth-child(2) {
+    margin-left: 100px;
+  }
   .contacts__item:nth-child(3) {
     width: 280px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
     margin-top: 25px;
+  }
+  .contacts__item:nth-child(4) {
+    margin-right: 100px;
   }
   .contacts__map {
     width: 1200px;
@@ -2448,7 +2440,7 @@ img {
     background-image: url('data:image/svg+xml;utf8,<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1260px" height="762px" viewBox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905" xml:space="preserve"><polygon fill="#ffffff" points="297.64,61.905 0,0 595.28,0 "/></svg>');
   }
   .contacts__map iframe {
-    width: 1200px;
+    width: 100%;
     height: 505px;
   }
   .page-footer__wrapper {
@@ -2627,12 +2619,12 @@ img {
     padding: 0 30px;
   }
   .text::before {
-    top: 486px;
-    left: 953px;
+    top: 485px;
+    left: 943px;
   }
   .text::after {
-    top: 486px;
-    left: 510px;
+    top: 485px;
+    left: 506px;
   }
   .text__label--low {
     margin-top: 70px;
